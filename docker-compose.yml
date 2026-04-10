@@ -22,8 +22,8 @@ services:
 
   backend:
     build:
-      context: ../backend           # путь к репозиторию бэка (рядом с деплоем)
-      dockerfile: Dockerfile
+      context: ../backend_team_A
+      dockerfile: dockerfile
     container_name: homeowner_backend
     depends_on:
       postgres:
@@ -41,8 +41,8 @@ services:
 
   frontend:
     build:
-      context: ../frontend           # путь к репозиторию фронта
-      dockerfile: Dockerfile
+      context: ../project-front
+      dockerfile: dockerfile
     container_name: homeowner_frontend
     ports:
       - "80:80"
